@@ -3,14 +3,6 @@
 # Android Performance Monitor [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.markzhai/blockcanary-android/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/com.github.markzhai/blockcanary-android)
 A transparent ui-block detection library for Android, app only needs one-line-code to setup.
 
-The naming is to pay respect to the great library [LeakCanary](https://github.com/square/leakcanary), ui-related codes are modified from leakcanary's ui part.
-
-- 1.5.0 Add context that can stop monitor in debug mode.
-- 1.4.1 Bug fix.
-- 1.4.0 Bug fix, add onBlock interceptor in context.
-- 1.3.1 Enable configuration of label and icon.
-- 1.3.0 Add white-list and concern-package feature.
-
 # Getting started
 
 You may choose how to assemble them as you like.
@@ -215,35 +207,18 @@ Principle flow picture:
 ![Block detail](art/shot1.png "detail")
 ![Block list](art/shot2.png "list")
 
-# Donation
 
-If you find this repository helpful, you may make a donation to me via alipay or wechat.
-![alipay](http://blog.zhaiyifan.cn/images/donation-alipay.png "alipay") ![wechat](http://blog.zhaiyifan.cn/images/donation.jpg "wechat")
-
-# Contributors
-
-This library is initially created by [markzhai](https://github.com/markzhai), and maintained under the organization [moduth](https://github.com/moduth) with [nimengbo](https://github.com/nimengbo) and [zzz40500](https://github.com/zzz40500).
-
-Special thanks to [android-cjj](https://github.com/android-cjj), [Mr.Bao](https://github.com/baoyongzhang), [chiahaolu](https://github.com/chiahaolu) to contribute.
-
-# Change Log
-
-Check [CHANGELOG](https://github.com/markzhai/AndroidPerformanceMonitor/blob/master/CHANGELOG.md)
-
-# Contribute
-
-If you would like to contribute code to BlockCanary you can do so through GitHub by forking the repository and sending a pull request.
 
 # License
 
     Copyright (C) 2016 MarkZhai (http://zhaiyifan.cn).
-
+    
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
-
+    
        http://www.apache.org/licenses/LICENSE-2.0
-
+    
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.

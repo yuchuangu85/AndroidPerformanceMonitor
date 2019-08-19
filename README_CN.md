@@ -3,13 +3,6 @@
 # Android Performance Monitor [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.markzhai/blockcanary-android/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/com.github.markzhai/blockcanary-android)
 BlockCanary是一个Android平台的一个非侵入式的性能监控组件，应用只需要实现一个抽象类，提供一些该组件需要的上下文环境，就可以在平时使用应用的时候检测主线程上的各种卡慢问题，并通过组件提供的各种信息分析出原因并进行修复。
 
-取名为BlockCanary则是为了向LeakCanary致敬，顺便本库的UI部分是从LeakCanary改来的，之后可能会做一些调整。
-
-- 1.5.0 Context 中增加 Debug 时不监控选项。
-- 1.4.1 Bug修复
-- 1.4.0 修复 1.3.x 的 bug，增加发生卡慢时的拦截方法。
-- 1.3.0 增加白名单和包名过滤功能
-
 # 包介绍
 
 - blockcanary-android  blockcanary类的一些实现
@@ -224,29 +217,18 @@ public class AppBlockCanaryContext extends BlockCanaryContext {
 ![Block detail](art/shot1.png "detail")
 ![Block list](art/shot2.png "list")
 
-# 贡献者
 
-该库最初由 [markzhai](https://github.com/markzhai) 创建, 并在 [魔都三帅](https://github.com/moduth) 组织下与 [nimengbo](https://github.com/nimengbo) 和 [zzz40500](https://github.com/zzz40500) 共同维护和更新.
-
-特别鸣谢[Mr.Bao](https://github.com/baoyongzhang), [android-cjj](https://github.com/android-cjj), [chiahaolu](https://github.com/chiahaolu)在项目早期做出的贡献。
-
-# 修改日志
-见[CHANGELOG](https://github.com/markzhai/AndroidPerformanceMonitor/blob/master/CHANGELOG.md)
-
-# 贡献
-
-如果你希望贡献代码到BlockCanary，你可以fork本repository然后发一个PR。
 
 # 协议
 
     Copyright (C) 2016 MarkZhai (http://zhaiyifan.cn).
-
+    
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
-
+    
        http://www.apache.org/licenses/LICENSE-2.0
-
+    
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
