@@ -37,7 +37,7 @@ class LooperMonitor implements Printer {
                           long threadTimeEnd);
     }
 
-    public LooperMonitor(BlockListener blockListener, long blockThresholdMillis, boolean stopWhenDebugging) {
+    LooperMonitor(BlockListener blockListener, long blockThresholdMillis, boolean stopWhenDebugging) {
         if (blockListener == null) {
             throw new IllegalArgumentException("blockListener should not be null.");
         }

@@ -61,7 +61,8 @@ public class AppContext extends BlockCanaryContext {
 
     @Override
     public boolean displayNotification() {
-        return BuildConfig.DEBUG;
+//        return BuildConfig.DEBUG;
+        return false;
     }
 
     @Override
@@ -81,5 +82,10 @@ public class AppContext extends BlockCanaryContext {
     @Override
     public boolean stopWhenDebugging() {
         return true;
+    }
+
+    @Override
+    public String getTag() {
+        return "TAG_GU";
     }
 }

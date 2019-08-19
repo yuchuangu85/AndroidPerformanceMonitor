@@ -104,7 +104,7 @@ public class BlockInfo {
     static {
         sCpuCoreNum = PerformanceUtils.getNumCores();
         sModel = Build.MODEL;
-        sApiLevel = Build.VERSION.SDK_INT + " " + VERSION.RELEASE;
+        sApiLevel = VERSION.SDK_INT + " " + VERSION.RELEASE;
         sQualifier = BlockCanaryInternals.getContext().provideQualifier();
         try {
             TelephonyManager telephonyManager = (TelephonyManager) BlockCanaryInternals

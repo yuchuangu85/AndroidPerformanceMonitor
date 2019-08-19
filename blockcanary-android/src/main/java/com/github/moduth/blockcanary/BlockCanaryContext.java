@@ -16,6 +16,7 @@
 package com.github.moduth.blockcanary;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.github.moduth.blockcanary.internal.BlockInfo;
 
@@ -30,6 +31,7 @@ public class BlockCanaryContext implements BlockInterceptor {
 
     private static Context sApplicationContext;
     private static BlockCanaryContext sInstance = null;
+    private String TAG = "BlockCanaryInfo";
 
     public BlockCanaryContext() {
     }
@@ -138,6 +140,7 @@ public class BlockCanaryContext implements BlockInterceptor {
      *
      * @param src  files before compress
      * @param dest files compressed
+     *
      * @return true if compression is successful
      */
     public boolean zip(File[] src, File dest) {
@@ -197,7 +200,9 @@ public class BlockCanaryContext implements BlockInterceptor {
      */
     @Override
     public void onBlock(Context context, BlockInfo blockInfo) {
-
+        if (!get().displayNotification()) {
+            Log.e(get().getTag(), blockInfo.toString());
+        }
     }
 
     /**
@@ -207,5 +212,9 @@ public class BlockCanaryContext implements BlockInterceptor {
      */
     public boolean stopWhenDebugging() {
         return true;
+    }
+
+    public String getTag() {
+        return TAG;
     }
 }

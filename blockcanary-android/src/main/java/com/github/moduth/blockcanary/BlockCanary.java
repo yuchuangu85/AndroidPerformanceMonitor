@@ -58,7 +58,9 @@ public final class BlockCanary {
      */
     public static BlockCanary install(Context context, BlockCanaryContext blockCanaryContext) {
         BlockCanaryContext.init(context, blockCanaryContext);
-        setEnabled(context, DisplayActivity.class, BlockCanaryContext.get().displayNotification());
+        if (!BlockCanaryContext.get().displayNotification()) {
+            setEnabled(context, DisplayActivity.class, BlockCanaryContext.get().displayNotification());
+        }
         return get();
     }
 
