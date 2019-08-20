@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.moduth.core;
+package com.github.moduth.blockcanary.core;
 
 import android.app.ActivityManager;
 import android.content.Context;
@@ -26,7 +26,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.regex.Pattern;
 
-class PerformanceUtils {
+public class PerformanceUtils {
     private static final String TAG = "PerformanceUtils";
 
     private static int sCoreNum = 0;

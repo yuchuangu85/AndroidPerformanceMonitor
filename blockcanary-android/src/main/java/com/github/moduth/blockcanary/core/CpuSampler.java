@@ -29,7 +29,7 @@ import java.util.Map;
 /**
  * Dumps cpu usage.
  */
-class CpuSampler extends AbstractSampler {
+public class CpuSampler extends AbstractSampler {
 
     private static final String TAG = "CpuSampler";
     private static final int BUFFER_SIZE = 1000;
@@ -49,7 +49,7 @@ class CpuSampler extends AbstractSampler {
     private long mTotalLast = 0;
     private long mAppCpuTimeLast = 0;
 
-    public CpuSampler(long sampleInterval) {
+    CpuSampler(long sampleInterval) {
         super(sampleInterval);
         BUSY_TIME = (int) (mSampleInterval * 1.2f);
     }
@@ -65,7 +65,7 @@ class CpuSampler extends AbstractSampler {
      *
      * @return string show cpu rate information
      */
-    public String getCpuRateInfo() {
+    String getCpuRateInfo() {
         StringBuilder sb = new StringBuilder();
         synchronized (mCpuInfoEntries) {
             for (Map.Entry<Long, String> entry : mCpuInfoEntries.entrySet()) {
@@ -79,7 +79,7 @@ class CpuSampler extends AbstractSampler {
         return sb.toString();
     }
 
-    public boolean isCpuBusy(long start, long end) {
+    boolean isCpuBusy(long start, long end) {
         if (end - start > mSampleInterval) {
             long s = start - mSampleInterval;
             long e = start + mSampleInterval;

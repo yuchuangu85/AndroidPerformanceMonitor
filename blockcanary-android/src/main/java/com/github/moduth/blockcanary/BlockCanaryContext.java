@@ -18,7 +18,7 @@ package com.github.moduth.blockcanary;
 import android.content.Context;
 import android.util.Log;
 
-import com.github.moduth.core.BlockInterceptor;
+import com.github.moduth.blockcanary.core.BlockInterceptor;
 import com.github.moduth.blockcanary.internal.BlockInfo;
 
 import java.io.File;

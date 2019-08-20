@@ -50,7 +50,7 @@ public class LogWriter {
      * @param str block info string
      * @return log file path
      */
-    public static String save(String str) {
+    static String save(String str) {
         String path;
         synchronized (SAVE_DELETE_LOCK) {
             path = save("looper", str);
@@ -61,7 +61,7 @@ public class LogWriter {
     /**
      * Delete obsolete log files, which is by default 2 days.
      */
-    public static void cleanObsolete() {
+    static void cleanObsolete() {
         HandlerThreadFactory.getWriteLogThreadHandler().post(new Runnable() {
             @Override
             public void run() {
@@ -137,7 +137,7 @@ public class LogWriter {
         return path;
     }
 
-    public static File generateTempZip(String filename) {
+    static File generateTempZip(String filename) {
         return new File(BlockCanaryInternals.getPath() + "/" + filename + ".zip");
     }
 }

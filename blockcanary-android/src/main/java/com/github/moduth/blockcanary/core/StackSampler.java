@@ -23,7 +23,7 @@ import java.util.LinkedHashMap;
 /**
  * Dumps thread stack.
  */
-class StackSampler extends AbstractSampler {
+public class StackSampler extends AbstractSampler {
 
     private static final int DEFAULT_MAX_ENTRY_COUNT = 100;
     private static final LinkedHashMap<Long, String> sStackMap = new LinkedHashMap<>();
@@ -31,17 +31,17 @@ class StackSampler extends AbstractSampler {
     private int mMaxEntryCount = DEFAULT_MAX_ENTRY_COUNT;
     private Thread mCurrentThread;
 
-    public StackSampler(Thread thread, long sampleIntervalMillis) {
+    StackSampler(Thread thread, long sampleIntervalMillis) {
         this(thread, DEFAULT_MAX_ENTRY_COUNT, sampleIntervalMillis);
     }
 
-    public StackSampler(Thread thread, int maxEntryCount, long sampleIntervalMillis) {
+    private StackSampler(Thread thread, int maxEntryCount, long sampleIntervalMillis) {
         super(sampleIntervalMillis);
         mCurrentThread = thread;
         mMaxEntryCount = maxEntryCount;
     }
 
-    public ArrayList<String> getThreadStackEntries(long startTime, long endTime) {
+    ArrayList<String> getThreadStackEntries(long startTime, long endTime) {
         ArrayList<String> result = new ArrayList<>();
         synchronized (sStackMap) {
             for (Long entryTime : sStackMap.keySet()) {

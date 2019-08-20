@@ -20,12 +20,12 @@ import java.util.concurrent.atomic.AtomicBoolean;
 /**
  * {@link AbstractSampler} sampler defines sampler work flow.
  */
-abstract class AbstractSampler {
+public abstract class AbstractSampler {
 
     private static final int DEFAULT_SAMPLE_INTERVAL = 300;
 
-    protected AtomicBoolean mShouldSample = new AtomicBoolean(false);
-    protected long mSampleInterval;
+    private AtomicBoolean mShouldSample = new AtomicBoolean(false);
+    long mSampleInterval;
 
     private Runnable mRunnable = new Runnable() {
         @Override
@@ -39,7 +39,7 @@ abstract class AbstractSampler {
         }
     };
 
-    public AbstractSampler(long sampleInterval) {
+    AbstractSampler(long sampleInterval) {
         if (0 == sampleInterval) {
             sampleInterval = DEFAULT_SAMPLE_INTERVAL;
         }

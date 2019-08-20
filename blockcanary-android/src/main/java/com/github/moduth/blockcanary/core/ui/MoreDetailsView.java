@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.moduth.core.ui;
+package com.github.moduth.blockcanary.core.ui;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -33,7 +33,8 @@ public final class MoreDetailsView extends View {
         mIconPaint.setColor(BlockCanaryUi.ROOT_COLOR);
     }
 
-    @Override protected void onDraw(Canvas canvas) {
+    @Override
+    protected void onDraw(Canvas canvas) {
         int width = getWidth();
         int height = getHeight();
         int halfHeight = height / 2;

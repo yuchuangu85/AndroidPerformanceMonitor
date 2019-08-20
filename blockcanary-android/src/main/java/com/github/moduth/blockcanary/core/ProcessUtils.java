@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.moduth.core;
+package com.github.moduth.blockcanary.core;
 
 import android.app.ActivityManager;
 import android.content.Context;

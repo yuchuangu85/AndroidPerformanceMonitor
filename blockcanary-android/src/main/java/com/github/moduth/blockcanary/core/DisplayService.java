@@ -35,7 +35,7 @@ import static android.os.Build.VERSION.SDK_INT;
 import static android.os.Build.VERSION_CODES.HONEYCOMB;
 import static android.os.Build.VERSION_CODES.JELLY_BEAN;
 
-final class DisplayService implements BlockInterceptor {
+public final class DisplayService implements BlockInterceptor {
 
     private static final String TAG = "DisplayService";
 

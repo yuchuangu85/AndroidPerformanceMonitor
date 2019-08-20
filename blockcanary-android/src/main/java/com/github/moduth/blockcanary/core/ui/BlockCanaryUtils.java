@@ -1,10 +1,10 @@
-package com.github.moduth.core.ui;
+package com.github.moduth.blockcanary.core.ui;
 
 import android.text.TextUtils;
 
-import com.github.moduth.core.BlockCanaryInternals;
+import com.github.moduth.blockcanary.core.BlockCanaryInternals;
 import com.github.moduth.blockcanary.internal.BlockInfo;
-import com.github.moduth.core.ProcessUtils;
+import com.github.moduth.blockcanary.core.ProcessUtils;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -28,7 +28,7 @@ final class BlockCanaryUtils {
     /**
      * Get key stack string to show as title in ui list.
      */
-    public static String concernStackString(BlockInfo blockInfo) {
+    static String concernStackString(BlockInfo blockInfo) {
         String result = "";
         for (String stackEntry : blockInfo.threadStackEntries) {
             if (Character.isLetter(stackEntry.charAt(0))) {
@@ -45,13 +45,13 @@ final class BlockCanaryUtils {
         return result;
     }
 
-    public static boolean isBlockInfoValid(BlockInfo blockInfo) {
+    static boolean isBlockInfoValid(BlockInfo blockInfo) {
         boolean isValid = !TextUtils.isEmpty(blockInfo.timeStart);
         isValid = isValid && blockInfo.timeCost >= 0;
         return isValid;
     }
 
-    public static boolean isInWhiteList(BlockInfo info) {
+    static boolean isInWhiteList(BlockInfo info) {
         for (String stackEntry : info.threadStackEntries) {
             if (Character.isLetter(stackEntry.charAt(0))) {
                 String[] lines = stackEntry.split(BlockInfo.SEPARATOR);
@@ -67,7 +67,7 @@ final class BlockCanaryUtils {
         return false;
     }
 
-    public static List<String> getConcernPackages() {
+    static List<String> getConcernPackages() {
         return CONCERN_LIST;
     }
 

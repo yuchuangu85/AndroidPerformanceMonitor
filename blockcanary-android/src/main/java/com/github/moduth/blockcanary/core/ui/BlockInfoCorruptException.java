@@ -1,4 +1,4 @@
-package com.github.moduth.core.ui;
+package com.github.moduth.blockcanary.core.ui;
 
 import java.util.Locale;
 
@@ -6,14 +6,14 @@ import java.util.Locale;
  * @author markzhai on 16/8/24
  * @version 1.3.0
  */
-public class BlockInfoCorruptException extends Exception {
+class BlockInfoCorruptException extends Exception {
 
-    public BlockInfoCorruptException(BlockInfoEx blockInfo) {
+    BlockInfoCorruptException(BlockInfoEx blockInfo) {
         this(String.format(Locale.US,
                 "BlockInfo (%s) is corrupt.", blockInfo.logFile.getName()));
     }
 
-    public BlockInfoCorruptException(String detailMessage) {
+    private BlockInfoCorruptException(String detailMessage) {
         super(detailMessage);
     }
 }

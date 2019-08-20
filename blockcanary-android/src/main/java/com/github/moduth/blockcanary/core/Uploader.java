@@ -23,7 +23,7 @@ import java.util.Date;
 import java.util.Locale;
 
 
-final class Uploader {
+public final class Uploader {
 
     private static final String TAG = "Uploader";
     private static final SimpleDateFormat FORMAT =

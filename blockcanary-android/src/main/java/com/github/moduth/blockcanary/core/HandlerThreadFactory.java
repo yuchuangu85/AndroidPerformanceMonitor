@@ -27,24 +27,24 @@ final class HandlerThreadFactory {
         throw new InstantiationError("Must not instantiate this class");
     }
 
-    public static Handler getTimerThreadHandler() {
+    static Handler getTimerThreadHandler() {
         return sLoopThread.getHandler();
     }
 
-    public static Handler getWriteLogThreadHandler() {
+    static Handler getWriteLogThreadHandler() {
         return sWriteLogThread.getHandler();
     }
 
     private static class HandlerThreadWrapper {
         private Handler handler = null;
 
-        public HandlerThreadWrapper(String threadName) {
+        HandlerThreadWrapper(String threadName) {
             HandlerThread handlerThread = new HandlerThread("BlockCanary-" + threadName);
             handlerThread.start();
             handler = new Handler(handlerThread.getLooper());
         }
 
-        public Handler getHandler() {
+        Handler getHandler() {
             return handler;
         }
     }

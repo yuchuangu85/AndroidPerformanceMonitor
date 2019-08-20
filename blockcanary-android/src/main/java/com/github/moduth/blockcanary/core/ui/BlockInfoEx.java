@@ -1,4 +1,4 @@
-package com.github.moduth.core.ui;
+package com.github.moduth.blockcanary.core.ui;
 
 import android.util.Log;
 
@@ -13,8 +13,8 @@ final class BlockInfoEx extends BlockInfo {
 
     private static final String TAG = "BlockInfoEx";
 
-    public File logFile;
-    public String concernStackString;
+    File logFile;
+    String concernStackString;
 
     /**
      * Create {@link BlockInfoEx} from saved log file.
@@ -22,7 +22,7 @@ final class BlockInfoEx extends BlockInfo {
      * @param file looper log file
      * @return LooperLog created from log file
      */
-    public static BlockInfoEx newInstance(File file) {
+    static BlockInfoEx newInstance(File file) {
         BlockInfoEx blockInfo = new BlockInfoEx();
         blockInfo.logFile = file;
 

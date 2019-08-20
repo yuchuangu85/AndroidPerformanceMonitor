@@ -22,9 +22,9 @@ import android.os.Build.VERSION;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
-import com.github.moduth.core.BlockCanaryInternals;
-import com.github.moduth.core.PerformanceUtils;
-import com.github.moduth.core.ProcessUtils;
+import com.github.moduth.blockcanary.core.BlockCanaryInternals;
+import com.github.moduth.blockcanary.core.PerformanceUtils;
+import com.github.moduth.blockcanary.core.ProcessUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

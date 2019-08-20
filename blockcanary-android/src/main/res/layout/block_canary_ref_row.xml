@@ -6,7 +6,7 @@
     android:minHeight="48dp"
     android:orientation="horizontal">
 
-    <com.github.moduth.core.ui.DisplayConnectorView
+    <com.github.moduth.blockcanary.core.ui.DisplayConnectorView
         android:id="@+id/__leak_canary_row_connector"
         android:layout_width="16dp"
         android:layout_height="match_parent"
@@ -20,7 +20,7 @@
         android:layout_gravity="center_vertical"
         android:layout_weight="1"/>
 
-    <com.github.moduth.core.ui.MoreDetailsView
+    <com.github.moduth.blockcanary.core.ui.MoreDetailsView
         android:id="@+id/__leak_canary_row_more"
         android:layout_width="12dp"
         android:layout_height="12dp"

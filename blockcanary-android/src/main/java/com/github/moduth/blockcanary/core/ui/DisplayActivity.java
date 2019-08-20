@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.moduth.core.ui;
+package com.github.moduth.blockcanary.core.ui;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -43,8 +43,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.github.moduth.blockcanary.BlockCanaryContext;
-import com.github.moduth.core.BlockCanaryInternals;
-import com.github.moduth.core.LogWriter;
+import com.github.moduth.blockcanary.core.BlockCanaryInternals;
+import com.github.moduth.blockcanary.core.LogWriter;
 import com.github.moduth.blockcanary.R;
 
 import java.io.File;

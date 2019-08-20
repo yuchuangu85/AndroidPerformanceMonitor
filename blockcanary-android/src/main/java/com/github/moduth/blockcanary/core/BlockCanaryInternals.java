@@ -29,9 +29,9 @@ import java.util.List;
 
 public final class BlockCanaryInternals {
 
-    LooperMonitor monitor;
-    StackSampler stackSampler;
-    CpuSampler cpuSampler;
+    public LooperMonitor monitor;
+    public StackSampler stackSampler;
+    public CpuSampler cpuSampler;
 
     private static BlockCanaryInternals sInstance;
     private static BlockCanaryContext sContext;
@@ -80,7 +80,7 @@ public final class BlockCanaryInternals {
      *
      * @return BlockCanaryInternals instance
      */
-    static BlockCanaryInternals getInstance() {
+    public static BlockCanaryInternals getInstance() {
         if (sInstance == null) {
             synchronized (BlockCanaryInternals.class) {
                 if (sInstance == null) {
@@ -104,7 +104,7 @@ public final class BlockCanaryInternals {
         return sContext;
     }
 
-    void addBlockInterceptor(BlockInterceptor blockInterceptor) {
+    public void addBlockInterceptor(BlockInterceptor blockInterceptor) {
         mInterceptorChain.add(blockInterceptor);
     }
 

@@ -1,11 +1,11 @@
 /*
- * Copyright (C) 2016 MarkZhai (http://zhaiyifan.cn).
+ * Copyright (C) 2015 Square, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ *      http://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -15,12 +15,21 @@
  */
 package com.github.moduth.blockcanary.core;
 
-import android.content.Context;
+import java.util.concurrent.ThreadFactory;
 
-import com.github.moduth.blockcanary.internal.BlockInfo;
+/**
+ * This is intended to only be used with a single thread executor.
+ */
+public final class SingleThreadFactory implements ThreadFactory {
 
-interface BlockInterceptor {
-    void onBlock(Context context, BlockInfo blockInfo);
+    private final String threadName;
 
+    public SingleThreadFactory(String threadName) {
+        this.threadName = "BlockCanary-" + threadName;
+    }
 
+    @Override
+    public Thread newThread(Runnable runnable) {
+        return new Thread(runnable, threadName);
+    }
 }

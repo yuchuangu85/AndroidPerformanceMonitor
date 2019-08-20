@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.moduth.core.ui;
+package com.github.moduth.blockcanary.core.ui;
 
 import android.content.Context;
 import android.text.Html;
@@ -126,7 +126,7 @@ final class DetailAdapter extends BaseAdapter {
         return htmlString;
     }
 
-    public void update(BlockInfo blockInfo) {
+    void update(BlockInfo blockInfo) {
         if (mBlockInfo != null && blockInfo.timeStart.equals(mBlockInfo.timeStart)) {
             // Same data, nothing to change.
             return;
@@ -137,7 +137,7 @@ final class DetailAdapter extends BaseAdapter {
         notifyDataSetChanged();
     }
 
-    public void toggleRow(int position) {
+    void toggleRow(int position) {
         mFoldings[position] = !mFoldings[position];
         notifyDataSetChanged();
     }
