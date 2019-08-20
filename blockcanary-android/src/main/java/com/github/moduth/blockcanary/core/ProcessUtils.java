@@ -13,12 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.moduth.blockcanary.internal;
+package com.github.moduth.core;
 
 import android.app.ActivityManager;
 import android.content.Context;
-
-import com.github.moduth.blockcanary.BlockCanaryInternals;
 
 import java.util.List;
 

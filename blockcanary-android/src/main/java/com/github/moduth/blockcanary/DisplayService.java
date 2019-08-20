@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.moduth.blockcanary;
+package com.github.moduth.blockcanary.core;
 
 import android.annotation.TargetApi;
 import android.app.Notification;
@@ -23,8 +23,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
+import com.github.moduth.blockcanary.R;
 import com.github.moduth.blockcanary.internal.BlockInfo;
-import com.github.moduth.blockcanary.ui.DisplayActivity;
+import com.github.moduth.blockcanary.core.ui.DisplayActivity;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.moduth.blockcanary.ui;
+package com.github.moduth.core.ui;
 
 import android.content.Context;
 import android.text.Html;

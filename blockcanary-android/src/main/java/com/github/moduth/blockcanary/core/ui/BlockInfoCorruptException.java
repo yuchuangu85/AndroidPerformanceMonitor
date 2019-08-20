@@ -1,4 +1,4 @@
-package com.github.moduth.blockcanary.ui;
+package com.github.moduth.core.ui;
 
 import java.util.Locale;
 

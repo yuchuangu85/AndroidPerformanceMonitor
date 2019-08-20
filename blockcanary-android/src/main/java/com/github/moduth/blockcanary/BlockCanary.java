@@ -21,7 +21,11 @@ import android.content.pm.PackageManager;
 import android.os.Looper;
 import android.preference.PreferenceManager;
 
-import com.github.moduth.blockcanary.ui.DisplayActivity;
+import com.github.moduth.core.BlockCanaryInternals;
+import com.github.moduth.core.DisplayService;
+import com.github.moduth.core.SingleThreadFactory;
+import com.github.moduth.core.Uploader;
+import com.github.moduth.core.ui.DisplayActivity;
 
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;

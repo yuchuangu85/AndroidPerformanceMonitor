@@ -1,10 +1,10 @@
-package com.github.moduth.blockcanary.ui;
+package com.github.moduth.core.ui;
 
 import android.text.TextUtils;
 
-import com.github.moduth.blockcanary.BlockCanaryInternals;
+import com.github.moduth.core.BlockCanaryInternals;
 import com.github.moduth.blockcanary.internal.BlockInfo;
-import com.github.moduth.blockcanary.internal.ProcessUtils;
+import com.github.moduth.core.ProcessUtils;
 
 import java.util.LinkedList;
 import java.util.List;
